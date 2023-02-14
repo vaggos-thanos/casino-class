@@ -10,11 +10,11 @@ class Casino:
 
     def win_loose(self):
         if self.moneyIn < self.moneyOut:
-            return "Win"
+            return "Win" + str(self.moneyOut - self.moneyIn) + "$"
         elif self.moneyIn > self.moneyOut:
-            return "Loose"
+            return "Loose" + str(abs(self.moneyOut - self.moneyIn)) + "$"
         else:
-            return "Draw"
+            return "Draw" + str(self.moneyOut - self.moneyIn) + "$"
     
     @staticmethod
     def quest():
